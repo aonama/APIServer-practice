@@ -4,7 +4,7 @@
 	"name": "RustAPI",
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
-	"dockerComposeFile": "docker-compose.yml",
+	"dockerComposeFile": "../docker-compose.yml",
 	"service": "api",
 	"workspaceFolder": "/home",
 	"customizations": {
