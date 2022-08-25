@@ -1,0 +1,10 @@
+[
+    {
+        "id": "Alice",
+        "password": "alice00"
+    },
+    {
+        "id": "Bob",
+        "password": "!bob<=>?"
+    }
+]
