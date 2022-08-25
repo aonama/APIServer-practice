@@ -10,4 +10,5 @@ RUN apt update \
     && apt-get install -y \
     git \
     curl \
-    vim
+    vim \
+    && rustup component add rustfmt
