@@ -1,3 +1,2 @@
-backend/*.txt
-backend/authorized/*
+backend/log.txt
 /target
