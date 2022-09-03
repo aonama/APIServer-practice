@@ -3,18 +3,27 @@ services:
   api:
     container_name: rust_api
     tty: true
-
     environment:
       TZ: Asia/Tokyo
-
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
-
     volumes:
       - type: bind
         source: .
         target: /home
-
     ports:
       - "127.0.0.1:8080:8080"
+    links:
+      - db
+    networks:
+      - default
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    networks:
+      - default
