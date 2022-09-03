@@ -1,5 +1,9 @@
 pub mod get_req;
 pub mod post_req;
+pub mod models;
+pub mod schema;
+pub mod utils;
+pub mod sql;
 
 use actix_cors::Cors;
 use actix_web::http::header;
@@ -35,7 +39,7 @@ async fn main() -> std::io::Result<()> {
             .service(get_req::get_message)
             .service(post_req::send_messsage)
             .route("/hey", web::get().to(get_req::manual_hello))
-            .data(templates)
+            .app_data(templates)
             .service(web::resource("/home").to(index))
     })
     .bind(("0.0.0.0", 8080))?
